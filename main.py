@@ -9,15 +9,14 @@ while True:
             todo = input("Enter a todo: ") 
             todos.append(todo)
         case "show":
-            for item in todos:
-                print(item)
+            for index, item in enumerate(todos):
+                print (f"{index + 1}-{item.capitalize()}")
+                
         case "edit":
-            number = int(input("Number of the todo to edit: ")) -
+            number = int(input("Number of the todo to edit: ")) 
             number = number - 1
             new_todo = input("Enter the new todo: ")
             todos[number] = new_todo
-            existing_todo = todos[number]
-            print(existing_todo)
         case "exit":
             break
-print("Bye!")
+print("Bye!")  
