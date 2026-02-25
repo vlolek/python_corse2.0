@@ -1,4 +1,5 @@
 import FreeSimpleGUI as sg
+from zip_extractor import extract_zip
 
 sg.theme('Black')
 
@@ -19,5 +20,11 @@ window = sg.Window("Archive Extractor",
                             [extract_button], 
                             [output]], 
                      font=('Helvetica', 20))
-window.read()
+while True:  
+    event, values = window.read()
+    arvhivepsth = values['archive']
+    dest_dir = values['folder']
+    extract_zip(arvhivepsth, dest_dir)
+    window['output'].update(value="Done!")
+    
 window.close()

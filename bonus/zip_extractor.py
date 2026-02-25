@@ -5,4 +5,5 @@ def extract_zip(archive_path, dest_dir):
         zip_ref.extractall(dest_dir)
 
 if __name__ == "__main__":
-    extract_archiev("")
+    extract_zip("/home/vlad/Desktop/python_corse2.0/bonus/compressed.zip", 
+                "/home/vlad/Desktop/python_corse2.0/bonus")
